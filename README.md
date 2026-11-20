@@ -1,4 +1,4 @@
-### *To access the notes : https://888jcb.github.io/Physics-notes-sem1/module-1---modern-optics*
+### *To access the notes : https://888jcb.github.io/Physics-notes-sem1/*
 
 
 
