@@ -113,7 +113,7 @@ Do not write “all properties improve at nanoscale.” A desired property can i
 
 A confined wave must fit the [[glossary/boundary-conditions|boundary conditions]]. In the simplest box model, a narrower region requires shorter standing-wave wavelengths. Shorter wavelength corresponds to larger momentum magnitude, and the kinetic energy therefore increases. This causal chain explains the inverse-square length scaling.
 
-For a fixed [[glossary/mode|mode]] number and mass in the same model, halving length quadruples its energy. Level separations also scale inversely with length squared. Do not say every energy in a real material quadruples: the reference band energies, finite barriers and interactions require a more specific model.
+For a fixed mode number and mass in the same model, halving length quadruples its energy. Level separations also scale inversely with length squared. Do not say every energy in a real material quadruples: the reference band energies, finite barriers and interactions require a more specific model.
 
 In many semiconductor dots the resulting larger optical transition energy means a shorter emitted wavelength. Compare like materials under comparable conditions. Shape, surface chemistry and composition can also change emission, so colour alone does not uniquely measure size.
 
@@ -301,7 +301,7 @@ These are engineering examples, not treatment advice. State whether an applicati
 
 **Solutions/rubric:** 1: roughly nanoscale characteristic dimension, surface contribution and size-dependent states. 2: free directions 2/1/0; confined directions 1/2/3; labelled sketches and examples. 3: restriction of motion versus resulting size-dependent energies/properties. 4: sheet/tube, graphene's simple gapless picture, CNT structure dependence. 5: each answer must name a material or structure, identify a relevant property and connect it to a function. Use Section 6 model chains.
 
-| Priority | Topics | [[glossary/basis\|Basis]] |
+| Priority | Topics | Basis |
 |---|---|---|
 | First | Dimensionality and confinement | Central conceptual dependency |
 | Next | Carbon [[glossary/allotrope\|allotropes]], graphene/CNT comparison | Explicit tracker coverage |

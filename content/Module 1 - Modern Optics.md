@@ -281,7 +281,7 @@ The image has parallax: moving the viewing position reveals a different perspect
 
 **Solutions/rubric:** 1: maximum accepted axial angle; $\mathrm{NA}=n_0\sin\theta_a$. 2: the five steps in Section 2, with both normals marked. 3: $17.46^\circ$, $34.92^\circ$. 4: compare abrupt/gradual profiles, zigzag/curved rays, delays and compensation. 5: [[glossary/coherence|coherent]] splitting, object/reference overlap, fringe recording, reconstruction by diffraction, plus security and deformation measurement with reasons.
 
-| Study priority | Topics | [[glossary/basis\|Basis]] |
+| Study priority | Topics | Basis |
 |---|---|---|
 | First | TIR, NA derivation and numericals | Central dependency of the fibre syllabus |
 | Next | Fibre comparisons, losses | Explicit tracker items and strong short-answer practice |

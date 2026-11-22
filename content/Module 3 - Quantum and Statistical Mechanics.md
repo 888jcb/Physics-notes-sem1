@@ -67,7 +67,7 @@ The cavity-hole picture explains the word [[glossary/blackbody|blackbody]]: ligh
 
 **Teach it back:** Does brighter red light necessarily have more energy per photon than dim blue light? Which quantity determines an individual photon's energy?
 
-A **blackbody** absorbs all incident electromagnetic radiation in the ideal limit and emits a thermal spectrum determined by temperature. A cavity with a small [[glossary/hole|hole]] approximates it: radiation entering the hole undergoes many internal reflections and is mostly absorbed.
+A **blackbody** absorbs all incident electromagnetic radiation in the ideal limit and emits a thermal spectrum determined by temperature. A cavity with a small hole approximates it: radiation entering the hole undergoes many internal reflections and is mostly absorbed.
 
 ![Blackbody spectral curves](assets/blackbody.png)
 
@@ -196,7 +196,7 @@ Electrical work $eV$ becomes kinetic energy $m_ev^2/2$. Solve for momentum rathe
 > [!success]- Answers
 > (1) $0.1227$ nm. (2) $p=1$ kg·m/s, so $\lambda=6.626\times10^{-34}$ m. Its wavelength is far too small for ordinary macroscopic diffraction observation.
 
-**Optional extension only:** for high-energy electrons, use $pc=\sqrt{K(K+2m_ec^2)}$ and $\lambda=h/p$. A relativistic derivation appears in the comparison paper, but it is not made a [[glossary/core|core]] derivation here.
+**Optional extension only:** for high-energy electrons, use $pc=\sqrt{K(K+2m_ec^2)}$ and $\lambda=h/p$. A relativistic derivation appears in the comparison paper, but it is not made a core derivation here.
 
 ## 6. Phase velocity and group velocity
 
@@ -476,7 +476,7 @@ Do not confuse occupation probability $f(E)$ with the **density of states** $g(E
 | $\Delta x\Delta p_x\ge\hbar/2$ | Same coordinate and momentum component |
 | $f=1/[1+e^{(E-\mu)/(k_BT)}]$ | Electron state occupation at equilibrium |
 
-**Required explanation/derivation checklist:** [ ] photon reasoning; [ ] accelerated-electron wavelength; [ ] [[glossary/phase|phase]]/group interpretation; [ ] uncertainty application. **Do not spend [[glossary/core|core]] revision time deriving:** photoelectric/Compton formulas, [[glossary/normalization|normalization]] integrals, Schrödinger equation, statistical distributions. **Diagram checklist:** [ ] [[glossary/blackbody|blackbody]] curve; [ ] photon experiments; [ ] Davisson–Germer; [ ] [[glossary/probability-density|probability density]]; [ ] Fermi curves.
+**Required explanation/derivation checklist:** [ ] photon reasoning; [ ] accelerated-electron wavelength; [ ] [[glossary/phase|phase]]/group interpretation; [ ] uncertainty application. **Do not spend core revision time deriving:** photoelectric/Compton formulas, [[glossary/normalization|normalization]] integrals, Schrödinger equation, statistical distributions. **Diagram checklist:** [ ] [[glossary/blackbody|blackbody]] curve; [ ] photon experiments; [ ] Davisson–Germer; [ ] [[glossary/probability-density|probability density]]; [ ] Fermi curves.
 
 ### Active recall
 
@@ -504,7 +504,7 @@ Do not confuse occupation probability $f(E)$ with the **density of states** $g(E
 
 **Solutions:** 1: choose blackbody and photoelectric explanations in Section 1. 2: $V_s=1240/400-1240/500=0.620$ V. 3: electrical work → momentum → de Broglie; $\lambda=1.227/\sqrt{200}=0.08676$ nm. 4: gun, nickel, angular intensity maxima and wavelength agreement. 5: total $\int|\psi|^2dx=1$ plus Section 10 equations and symbol meanings. 6: $\Delta v_{\min}=\hbar/(2m_e\Delta x)=2.90\times10^5$ m/s. 7: compare particle rules, occupancy and examples; show step, smoothing and $f(\mu)=1/2$ for $T>0$.
 
-| Priority | What to practise | [[glossary/basis\|Basis]] |
+| Priority | What to practise | Basis |
 |---|---|---|
 | First | Photon energy, emission, Compton, de Broglie, uncertainty | Explicit tracker numerical skills |
 | Equally essential | Wave-function meaning, MB/BE/FD, Fermi curves | Large conceptual branch; cannot be replaced by formulas alone |
