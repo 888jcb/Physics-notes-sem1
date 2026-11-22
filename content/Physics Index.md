@@ -4,7 +4,7 @@ tags: [physics, semester-1, index]
 ---
 # Engineering Physics — Semester 1
 
-**For:** first-year B.Tech CSE, SurTech, Kolkata. **Prepared:** 20 November 2026. **Scope authority:** [[Semester_1_Study_Tracker|your semester tracker]], Engineering Physics section.
+**For:** first-year B.Tech CSE, SurTech, Kolkata. **Prepared:** 20 November 2026. **Scope authority:** your Semester 1 study tracker, Engineering Physics section.
 
 > [!important] Tracker coverage is not full official-syllabus coverage
 > SurTech's [official R25 CSE curriculum](https://www.surtech.edu.in/pdf/r25/cse.pdf), effective from the 2025–26 admission batch, includes lasers in Module 1 and a fifth module on storage/display devices (PDF pp.16–18). Those are absent from your four-module tracker. These notes follow your explicit tracker scope. Confirm any teacher-issued exclusions before treating them as complete preparation for the full official examination. Your admission/regulation year has not been independently confirmed.
@@ -22,6 +22,9 @@ Each file contains its own explanations, diagrams, applicable derivations, worke
 
 ## How to use the notes
 
+Each topic now begins with a first-principles explanation and a teach-back question. Use the analogy to begin, then check its limits and connect it to the actual physical mechanism. Hover a linked scientific term for a short definition on the website; click it to read the full glossary card.
+
+
 1. Read one topic with its diagram, then explain it aloud without looking.
 2. Reproduce the core diagram and formula from memory; label symbols and assumptions.
 3. Cover the worked solution and solve the example yourself. Compare the **method**, not just the final number.
@@ -36,7 +39,7 @@ Recommended conceptual order: Module 1 → Module 2 crystal sections → Module 
 - [[Question Bank and Past Paper Analysis]] — original mixed questions plus a clearly labelled comparison-paper audit.
 - [[Sources and Coverage]] — complete local-resource inventory, source page references, source corrections and every tracker topic mapped to a section.
 - [[Diagram Gallery]] — all image files on one page, with direct links for opening them.
-- [[Website Hosting Guide]] — copy the Physics notes into Quartz and publish with GitHub Pages.
+- [[Physics Glossary]] — plain-language term definitions, examples and common confusions; preview linked terms while reading.
 
 ## Images and navigation
 

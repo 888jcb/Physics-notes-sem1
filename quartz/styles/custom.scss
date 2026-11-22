@@ -1,3 +1,72 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+// Physics glossary previews
+article a.physics-term,
+article a.internal[href*="/glossary/"] {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+  cursor: help;
+}
+.physics-term:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+}
+.physics-definition {
+  position: fixed;
+  z-index: 1100;
+  box-sizing: border-box;
+  width: min(30rem, calc(100vw - 24px));
+  max-height: min(32rem, calc(100dvh - 24px));
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--light);
+  color: var(--darkgray);
+  border: 1px solid var(--gray);
+  border-radius: 0.6rem;
+  box-shadow: 0 8px 32px #0004;
+  padding: 1rem;
+  font-family: var(--bodyFont);
+  font-size: 1rem;
+  line-height: 1.55;
+  h1 {
+    font-size: 1.3rem;
+    margin: 0 0 0.75rem;
+  }
+  p {
+    margin: 0.6rem 0;
+  }
+  a {
+    color: var(--secondary);
+  }
+}
+.physics-definition-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--lightgray);
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  a,
+  button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+.physics-definition-close {
+  font: inherit;
+  padding: 0.3rem 0.7rem;
+  color: var(--dark);
+  background: var(--lightgray);
+  border: 1px solid var(--gray);
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+@media print {
+  .physics-definition {
+    display: none;
+  }
+}

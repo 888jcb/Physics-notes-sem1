@@ -6,9 +6,37 @@ tags: [physics, semester-1, module-2]
 [[Physics Index|Index]] · [[Formula and Revision Guide|Final revision]]
 
 > [!abstract] Learning route
-> Begin with order in solids, then lattice + basis, cubic-cell geometry, plane indexing and X-ray diffraction. Finish with energy bands, doping and junction formation. Prerequisites: fractions, reciprocals, Pythagoras and charge conservation. Questions are original practice; marks are suggested unless a past-paper source is explicitly identified.
+> Begin with order in solids, then [[glossary/lattice|lattice]] + [[glossary/basis|basis]], cubic-cell geometry, plane indexing and X-ray [[glossary/diffraction|diffraction]]. Finish with [[glossary/energy-band|energy bands]], [[glossary/doping|doping]] and junction formation. Prerequisites: fractions, reciprocals, Pythagoras and charge conservation. Questions are original practice; marks are suggested unless a past-paper source is explicitly identified.
+
+## Read the symbols before calculating
+
+Symbols are local labels: the same letter can mean something different in another topic. Read the equation and units before choosing a formula. A subscript labels a particular quantity; it is not a factor to multiply.
+
+| Symbol | Read it as | Meaning and unit |
+|---|---|---|
+| $a,r,d$ | a, r, d | Cell edge, atomic radius, [[glossary/interplanar-spacing\|interplanar spacing]]; lengths in consistent units |
+| $Z$ | zed | Effective atoms per conventional cell; a count, different from [[glossary/coordination-number\|coordination number]] |
+| $(hkl)$ | h k l | Miller plane indices; integers, not lengths |
+| $n$ in Bragg's law | [[glossary/diffraction\|diffraction]] order | Positive integer; not [[glossary/refractive-index\|refractive index]] in that equation |
+| $n,p,n_i$ in carrier formulas | electron, [[glossary/hole\|hole]], intrinsic densities | Number per volume, usually per cubic metre |
+| $E_g$ | E gap | Band-gap energy; eV or J |
+| $\mu_n,\mu_p$ | electron and hole mobilities | Drift-speed response per field; square metres per volt-second |
+| $\sigma$ | sigma | Electrical conductivity; siemens per metre |
+
+> [!tip] Understand it, then teach it back
+> Start each topic with its plain-language explanation. Read the original equations and examples next. Close the note and answer the teach-back question in your own words. Linked scientific terms open a short definition: hover on the website, or open the linked note in Obsidian. On phones, tap a term for its definition. These are original teaching explanations, not quotations from Richard Feynman.
 
 ## 1. Structure of solids
+
+### Order is about repeating arrangements, not whether atoms move
+
+Even in a solid, atoms vibrate around local equilibrium positions. A crystal's important feature is that an ideal arrangement repeats over long distances. An amorphous solid can have sensible local bonding without that long-range repetition.
+
+Imagine comparing a repeating floor pattern with a mosaic that has locally similar pieces but no repeating large pattern. This is an analogy for positional order, not a claim that atoms are motionless tiles. Real crystals also have defects and surfaces.
+
+To explain a property, connect it to structure. An ordered arrangement makes scattering from many regularly spaced planes reinforce at particular angles. Losing long-range repetition broadens the [[glossary/diffraction|diffraction]] features. Do not memorize regular versus irregular as your entire answer.
+
+**Teach it back:** Can an amorphous solid have neighbours arranged in a locally preferred way? Can a sample with many small randomly oriented crystals behave approximately isotropically?
 
 Atoms, ions or molecules in a solid stay near equilibrium positions while vibrating. The arrangement and bonding determine many material properties. “Solid” does not necessarily mean “crystalline.”
 
@@ -26,6 +54,16 @@ Avoid saying every crystalline property is anisotropic: cubic crystals can have 
 
 ## 2. Lattice, basis, unit cell and Bravais lattices
 
+### Build a crystal in three instructions
+
+First mark a repeating set of equivalent positions: the [[glossary/lattice|lattice]]. Then put the same atomic motif at every mark: the [[glossary/basis|basis]]. Finally choose a repeating volume you can translate to build the whole structure: a [[glossary/unit-cell|unit cell]]. A wallpaper analogy is useful: the repeat positions differ from the motif printed at each position.
+
+This distinction prevents an important mistake. A lattice point need not stand for exactly one atom. If the basis contains several atoms, repeating one lattice point repeats that entire group. Likewise, a conventional cell may be chosen for an easy-to-see symmetry rather than the smallest possible volume.
+
+Bravais types classify the geometry of equivalent translation points. They cannot list every real crystal, because many different atomic bases can be attached to the same lattice type.
+
+**Teach it back:** Explain lattice, basis and crystal structure without using those three terms in your explanation. Then say what repeats when you translate one unit cell.
+
 **Lattice:** an infinite periodic set of points with identical surroundings at every point. It is a geometrical construction, not a list of actual atoms.
 
 **Basis:** the atom or group of atoms attached identically to every lattice point.
@@ -36,7 +74,7 @@ $$\text{Crystal structure}=\text{lattice}+\text{basis}.$$
 
 **Example:** a simple-cubic lattice with a one-atom basis places the same atom at each lattice point. A multi-atom basis can create a more complicated structure without changing the underlying lattice. Do not confuse an atom with a lattice point in every possible crystal.
 
-The **14 Bravais lattices** are the distinct three-dimensional translational lattice types, distributed across seven crystal systems:
+The **14 [[glossary/bravais-lattice|Bravais lattices]]** are the distinct three-dimensional translational lattice types, distributed across seven crystal systems:
 
 | System | Cell parameters | Allowed conventional centring |
 |---|---|---|
@@ -54,6 +92,16 @@ P = primitive; I = body-centred; F = face-centred; C = base-centred. The count i
 
 ## 3. SC, BCC, FCC and coordination number
 
+### Count ownership and neighbours separately
+
+A cube drawing shows complete circles at its corners, but each corner lies at the meeting point of eight neighbouring cubes. The correct bookkeeping assigns one eighth of that atom to each cell. Nothing cuts a real atom into pieces; we divide its contribution to a repeated counting volume.
+
+Coordination asks a different question: stand at one atom and count its nearest neighbours in the extended crystal. To see all neighbours, you must include adjacent cells. For FCC, stopping at the atoms visible in one cube makes the count confusing.
+
+For the radius relation, draw the line along which hard-sphere atoms actually touch. In SC it is an edge; in BCC the body diagonal; in FCC a face diagonal. Geometry then gives the formula. This is more reliable than remembering three unrelated expressions.
+
+**Teach it back:** Why can FCC have four effective atoms per cell but twelve nearest neighbours per atom?
+
 ![Cubic cells and atom counting](assets/cubic-cells.png)
 
 The sketches show atom **centres**, not touching hard spheres. Back edges are schematic. To redraw: draw two offset squares and join corresponding corners; add the body centre for BCC or all six face centres for FCC, including hidden faces.
@@ -64,7 +112,7 @@ The sketches show atom **centres**, not touching hard spheres. Back edges are sc
 - A face-centre atom belongs to two cells: contribution $1/2$.
 - A body-centre atom belongs to just one cell: contribution $1$.
 
-**Coordination number (CN)** is the number of nearest neighbours of a chosen atom in the structure. It is not the number of atoms in a unit cell.
+**[[glossary/coordination-number|Coordination number]] (CN)** is the number of nearest neighbours of a chosen atom in the structure. It is not the number of atoms in a [[glossary/unit-cell|unit cell]].
 
 | Structure | Atoms per conventional cell $Z$ | Contact direction | Radius–edge relation | CN | Examples |
 |---|---:|---|---|---:|---|
@@ -78,6 +126,14 @@ The sketches show atom **centres**, not touching hard spheres. Back edges are sc
 > **SC/BCC/FCC: atoms 1–2–4, neighbours 6–8–12; touching directions edge–body–face.**
 
 ## 4. Atomic packing factor
+
+### Ask what fraction of the box is occupied
+
+Packing factor is a ratio of two volumes: model atomic volume assigned to one cell divided by that cell's volume. Both use the same length unit, so the units cancel. The atom count alone cannot answer the question because different structures require different box sizes for the same atomic radius.
+
+Use the same three-step recipe every time: find atoms per cell, find edge length in terms of radius from the touching geometry, then substitute into the volume ratio. The radius cancels because making every sphere and the box twice as large multiplies both volumes by eight.
+
+**Teach it back:** If you double atomic radius but keep the same ideal structure, why does [[glossary/atomic-packing-factor|APF]] stay unchanged? Why is APF = 1.2 impossible in this non-overlapping sphere model?
 
 The **atomic packing factor (APF)** is the fraction of unit-cell volume occupied by atoms in the equal hard-sphere model:
 
@@ -112,7 +168,17 @@ $$\mathrm{APF}=\frac{4(4\pi r^3/3)}{(2\sqrt2r)^3}=\frac{\pi}{3\sqrt2}=0.740.$$
 
 ## 5. Miller indices and Miller planes
 
-Miller indices $(hkl)$ specify the orientation of lattice planes using reciprocals of their intercepts with the crystallographic axes, measured in units of $a,b,c$. A zero index means the plane is parallel to that axis. A negative index is written with a bar, for example $(\bar1 1 0)$.
+### Describe the tilt using where a plane cuts the axes
+
+Intercepts describe where a plane meets each axis. Reciprocals turn a very distant intercept into a small index, and an infinite intercept into zero. That is why a plane parallel to z has a zero z index. Express distances in a, b and c units before taking reciprocals.
+
+Imagine parallel slices through a loaf. Moving a slice without tilting it changes its position but not its orientation. The usual intercept procedure identifies the orientation; do not expect the reduced indices to preserve the particular original plane's offset. A plane through the origin needs a parallel representative or a shifted origin before reciprocals are taken.
+
+[[glossary/interplanar-spacing|Interplanar spacing]] then asks a separate metric question: what is the shortest perpendicular distance between the specified neighbouring parallel planes? The compact cubic formula relies on cubic geometry.
+
+**Teach it back:** Explain why an infinite intercept gives zero, rather than infinity, in the final indices.
+
+[[glossary/miller-indices|Miller indices]] $(hkl)$ specify the orientation of [[glossary/lattice|lattice]] planes using reciprocals of their intercepts with the crystallographic axes, measured in units of $a,b,c$. A zero index means the plane is parallel to that axis. A negative index is written with a bar, for example $(\bar1 1 0)$.
 
 ![Representative cubic Miller planes](assets/miller.png)
 
@@ -123,7 +189,7 @@ Miller indices $(hkl)$ specify the orientation of lattice planes using reciproca
 3. Clear fractions to obtain the smallest appropriate integer orientation indices.
 4. Put the result in round brackets. If the plane passes through the origin, choose a parallel plane or shift the origin first.
 
-$(hkl)$ denotes a plane orientation/set of parallel planes; $[uvw]$ denotes a direction. In cubic crystals the direction $[hkl]$ is normal to $(hkl)$, but this is not generally true for non-cubic cells. Braces $\{hkl\}$ collect symmetry-equivalent planes.
+$(hkl)$ denotes a plane orientation/set of parallel planes; $[uvw]$ denotes a direction. In cubic crystals the direction $[hkl]$ is [[glossary/normal|normal]] to $(hkl)$, but this is not generally true for non-cubic cells. Braces $\{hkl\}$ collect symmetry-equivalent planes.
 
 **Worked A:** Given intercepts $a,2b,\infty c$, find indices. In cell units they are $(1,2,\infty)$; reciprocals $(1,1/2,0)$; multiply by 2 → **$(210)$**. Check: $l=0$ correctly indicates parallelism to $c$.
 
@@ -149,6 +215,16 @@ Here $d$ and $a$ are lengths, e.g. nm. This expression is for cubic geometry, no
 
 ## 6. Bragg's equation and applications
 
+### A diffraction peak is a timing agreement between waves
+
+Imagine waves scattered from two successive planes. The wave reaching the deeper plane travels extra distance on its way in and on its way out. If that extra travel is one whole wavelength, two whole wavelengths, and so on, the waves arrive with matching phases and reinforce.
+
+The drawing turns that statement into 2d sin(theta) = n lambda: each extra segment contributes d sin(theta). Without the drawing, it is easy to use the angle from the [[glossary/normal|normal]] when the formula needs the angle from the plane.
+
+At fixed wavelength and [[glossary/diffraction|diffraction]] order, a smaller plane spacing needs a larger sine and therefore a larger [[glossary/bragg-angle|Bragg angle]], if reflection is geometrically possible. If your calculation demands sine greater than one, that chosen combination cannot produce the proposed order.
+
+**Teach it back:** Explain both the factor 2 and the integer n without doing algebra. Why is the detector angle commonly twice the angle in the equation?
+
 X-ray wavelengths are comparable to atomic-plane separations, so waves scattered by successive crystal planes can interfere. **Bragg's condition** for a constructive peak is
 
 $$2d\sin\theta=n\lambda,\qquad n=1,2,3,\ldots$$
@@ -159,9 +235,9 @@ $\theta$ is the **glancing angle to the planes**, $d$ is plane spacing, $\lambda
 
 ### Guided derivation
 
-Draw two parallel planes a distance $d$ apart and two parallel incident rays making angle $\theta$ with the planes. The ray scattered from the lower plane travels farther before scattering and again after scattering. Project the plane separation onto each ray direction: each extra segment is $d\sin\theta$. Total extra path is $2d\sin\theta$. Constructive interference requires an integer number of wavelengths, hence $2d\sin\theta=n\lambda$.
+Draw two parallel planes a distance $d$ apart and two parallel incident rays making angle $\theta$ with the planes. The ray scattered from the lower plane travels farther before scattering and again after scattering. Project the plane separation onto each ray direction: each extra segment is $d\sin\theta$. Total extra path is $2d\sin\theta$. Constructive [[glossary/interference|interference]] requires an integer number of wavelengths, hence $2d\sin\theta=n\lambda$.
 
-**Applications:** calculate $d$ from known wavelength and peak angle; determine an unknown wavelength using known crystal spacing; infer lattice parameter after indexing peaks; compare diffraction patterns to identify crystalline phases. Bragg's equation alone does not uniquely identify an unknown crystal from one peak.
+**Applications:** calculate $d$ from known wavelength and peak angle; determine an unknown wavelength using known crystal spacing; infer [[glossary/lattice|lattice]] parameter after indexing peaks; compare diffraction patterns to identify crystalline phases. Bragg's equation alone does not uniquely identify an unknown crystal from one peak.
 
 **Worked A — spacing:** Given first-order $\theta=30^\circ$ and $\lambda=0.154$ nm, find $d$. A constructive peak gives $d=n\lambda/(2\sin\theta)=0.154/(2\times0.5)=0.154$ nm. Check: both sides of Bragg's equation are lengths.
 
@@ -174,9 +250,19 @@ Draw two parallel planes a distance $d$ apart and two parallel incident rays mak
 
 ## 7. Physics of semiconductors and energy bands
 
-**Intuition:** an electron can conduct when there are nearby available energy states into which its motion can change. In a solid, interactions between many atoms turn individual atomic energy levels into closely spaced **bands**. A **forbidden energy gap** has no allowed bulk electron states in the ideal band picture.
+### Allowed energies are like available options, not physical shelves
 
-The **valence band (VB)** is the highest filled band at zero temperature in the simple intrinsic semiconductor picture. The **conduction band (CB)** above it can carry excited electrons. Band gap $E_g=E_c-E_v$ is measured in joules or electronvolts; $1\,\mathrm{eV}=1.602\times10^{-19}$ J.
+Begin with isolated atoms, each having allowed electron energies. Bring many atoms together: interactions produce an enormous collection of closely spaced states, organized into bands. The band picture describes allowed energies throughout the solid; its vertical axis is energy, not height inside the specimen.
+
+To conduct, electrons need suitable available states so the field can change their motion. A completely filled band does not behave like a partly filled band. In the simple semiconductor picture, supplying enough energy promotes an electron to the conduction band and leaves a [[glossary/hole|hole]] behind in the valence band.
+
+Picture a nearly full row of seats: a person moves into the empty seat, leaving a new vacancy. The vacancy seems to move the other way. This helps explain hole motion, but the actual system consists of quantum states, not people jumping between [[glossary/energy-band|energy bands]] at every step.
+
+**Teach it back:** Why is a [[glossary/band-gap|band gap]] an energy interval? Why does creating an electron in the conduction band also leave a hole in an intrinsic material?
+
+**Intuition:** an electron can conduct when there are nearby available [[glossary/energy-state|energy states]] into which its motion can change. In a solid, interactions between many atoms turn individual atomic energy levels into closely spaced **bands**. A **forbidden energy gap** has no allowed bulk electron states in the ideal band picture.
+
+The **valence band (VB)** is the highest filled band at zero temperature in the simple [[glossary/intrinsic-semiconductor|intrinsic semiconductor]] picture. The **conduction band (CB)** above it can carry excited electrons. Band gap $E_g=E_c-E_v$ is measured in joules or electronvolts; $1\,\mathrm{eV}=1.602\times10^{-19}$ J.
 
 ![Bands, doping and depletion region](assets/semiconductor.png)
 
@@ -184,7 +270,7 @@ The **valence band (VB)** is the highest filled band at zero temperature in the 
 |---|---|---|
 | Metal | Partly occupied band or overlapping bands with nearby empty states | Readily conducts |
 | Insulator | Filled VB, empty CB, relatively large gap | Very few thermally generated carriers under ordinary conditions |
-| Semiconductor | Smaller gap, carrier population controllable by temperature, light and doping | Intermediate, strongly controllable conductivity |
+| Semiconductor | Smaller gap, carrier population controllable by temperature, light and [[glossary/doping\|doping]] | Intermediate, strongly controllable conductivity |
 
 There is no universal gap boundary that classifies every material at every temperature. For orientation, silicon's gap is about 1.1 eV near room temperature. “Semiconductor” does not mean it always conducts exactly half as well as a metal.
 
@@ -192,11 +278,21 @@ There is no universal gap boundary that classifies every material at every tempe
 
 An electron excited from VB to CB leaves an empty valence state, a **hole**. A neighbouring valence electron can fill the vacancy, leaving a new vacancy behind. This collective motion acts as a positively charged mobile carrier, with effective charge $+e$. A hole is not a proton or a physically detached positive ion.
 
-With an applied electric field, electron drift is opposite to the field and hole drift is along it. Both contribute conventional current along the field.
+With an applied electric field, electron [[glossary/drift|drift]] is opposite to the field and hole drift is along it. Both contribute conventional current along the field.
 
 **Question (suggested 3 marks): Explain a hole.** Define the missing valence electron state; describe neighbouring-electron filling; explain the apparent positive-charge motion and distinguish it from a stationary dopant ion.
 
 ## 8. Intrinsic and extrinsic semiconductors
+
+### Change the easy-to-move charges without charging the whole crystal
+
+In intrinsic material, thermal excitation creates carriers in pairs, so electron and [[glossary/hole|hole]] concentrations are equal. [[glossary/doping|Doping]] adds a different route: donors have an electron that can become mobile relatively easily, while acceptors make it easier to create mobile holes.
+
+Track charge conservation. A neutral donor that releases an electron becomes a fixed positive ion; the mobile negative electron balances it. An acceptor that takes an electron becomes negative; the resulting hole supplies the matching positive carrier. Therefore n-type and p-type name majority carriers, not the sign of the entire crystal.
+
+The conductivity expression separates two causes: how many carriers are available and how readily they [[glossary/drift|drift]] in a field. That is why carrier concentration and mobility appear separately. Mobility is not carrier number.
+
+**Teach it back:** Tell the story of one donor atom and account for both the mobile electron and the fixed charge it leaves behind.
 
 **Intrinsic:** an ideally pure semiconductor. Thermal excitation creates electron–hole pairs, so carrier number densities satisfy $n=p=n_i$. These densities are counts per m³. More thermal excitation normally increases intrinsic carrier density strongly.
 
@@ -222,14 +318,24 @@ For context, conductivity is $\sigma=e(n\mu_n+p\mu_p)$, where $\mu_n,\mu_p$ are 
 
 ## 9. p-n junction
 
+### The junction builds its own opposing field
+
+Initially the two regions have different carrier concentrations. Random motion gives a net [[glossary/diffusion|diffusion]] of majority carriers across the boundary. Recombination removes mobile carriers nearby but leaves the dopant atoms fixed in place. Their exposed charges create an electric field.
+
+That field opposes further majority-carrier diffusion. Equilibrium occurs when [[glossary/drift|drift]] and diffusion currents cancel, not when every particle stops moving. Trace field direction from positive n-side donors towards negative p-side acceptors; then remember that electron force is opposite the field.
+
+Forward bias reduces the energy barrier to crossing and usually narrows depletion. Reverse bias raises the barrier and widens depletion. The applied voltage reshapes a pre-existing junction barrier; it does not invent the junction from nothing.
+
+**Teach it back:** Draw fixed ions and the field before drawing any battery. Why can a region depleted of mobile carriers still contain charge?
+
 A p-n junction is the boundary between p-type and n-type regions in one semiconductor structure.
 
 ### Formation in five steps
 
-1. Initially electrons are numerous on the n side and holes on the p side.
+1. Initially electrons are numerous on the n side and [[glossary/hole|holes]] on the p side.
 2. Concentration gradients cause electrons to diffuse n→p and holes p→n.
 3. Recombination near the interface removes many mobile carriers.
-4. Fixed **negative acceptor ions on the p side** and **positive donor ions on the n side** remain. This forms a space-charge/depletion region, depleted mainly of mobile majority carriers.
+4. Fixed **negative acceptor ions on the p side** and **positive donor ions on the n side** remain. This forms a space-charge/[[glossary/depletion-region|depletion region]], depleted mainly of mobile majority carriers.
 5. The resulting built-in electric field points **n→p**, opposing further majority-carrier diffusion. At equilibrium drift and diffusion currents balance; net current is zero.
 
 **Forward bias:** p connected to positive, n to negative. Applied voltage lowers the barrier and usually narrows depletion width; majority carriers cross more readily and current grows.
@@ -245,17 +351,17 @@ A p-n junction is the boundary between p-type and n-type regions in one semicond
 | Formula or fact | Units/condition |
 |---|---|
 | $Z=1,2,4$; CN $=6,8,12$ for SC/BCC/FCC | Equal-atom conventional cubic structures |
-| APF $=Z(4\pi r^3/3)/a^3$ | Dimensionless hard-sphere model |
+| [[glossary/atomic-packing-factor\|APF]] $=Z(4\pi r^3/3)/a^3$ | Dimensionless hard-sphere model |
 | $d_{hkl}=a/\sqrt{h^2+k^2+l^2}$ | Cubic crystals; lengths in same unit |
-| $2d\sin\theta=n\lambda$ | Glancing angle; constructive diffraction |
-| Intrinsic $n=p$ | Electron/hole number densities, m⁻³ |
+| $2d\sin\theta=n\lambda$ | [[glossary/bragg-angle\|Glancing angle]]; constructive [[glossary/diffraction\|diffraction]] |
+| Intrinsic $n=p$ | Electron/[[glossary/hole\|hole]] number densities, m⁻³ |
 
 **Derivation checklist:** [ ] three radius–edge relations; [ ] APFs; [ ] cubic spacing; [ ] Bragg path difference. **Diagram checklist:** [ ] SC/BCC/FCC; [ ] (100)/(110)/(111); [ ] Bragg; [ ] bands/dopant levels; [ ] junction ions and field.
 
 ### Active recall
 
 1. Why does a corner atom count as $1/8$?
-2. Is coordination number equal to atoms per cell?
+2. Is [[glossary/coordination-number|coordination number]] equal to atoms per cell?
 3. What index represents an infinite intercept?
 4. Does a diffraction instrument's $2\theta$ equal the Bragg angle?
 5. Why does a donor become positively charged?
@@ -263,11 +369,11 @@ A p-n junction is the boundary between p-type and n-type regions in one semicond
 7. Why is equilibrium current zero despite carrier motion?
 
 > [!success]- Answers
-> 1. Eight cubes share it. 2. No: nearest neighbours versus effective cell content. 3. Zero. 4. No; halve it. 5. It loses a weakly bound electron. 6. From n-side positive donors toward p-side negative acceptors. 7. Drift and diffusion contributions cancel.
+> 1. Eight cubes share it. 2. No: nearest neighbours versus effective cell content. 3. Zero. 4. No; halve it. 5. It loses a weakly bound electron. 6. From n-side positive donors toward p-side negative acceptors. 7. [[glossary/drift|Drift]] and [[glossary/diffusion|diffusion]] contributions cancel.
 
 ### Mixed test — suggested 25 marks
 
-1. Explain lattice, basis and unit cell with one example. (4)
+1. Explain [[glossary/lattice|lattice]], [[glossary/basis|basis]] and [[glossary/unit-cell|unit cell]] with one example. (4)
 2. Derive FCC packing factor. (5)
 3. Index a plane with intercepts $2a,b,\infty c$. (2)
 4. For $a=0.360$ nm and $\lambda=0.154$ nm, find first-order $\theta$ for an allowed (111) reflection. (4)
@@ -278,12 +384,12 @@ A p-n junction is the boundary between p-type and n-type regions in one semicond
 
 | Priority | Topics | Basis |
 |---|---|---|
-| First | Cubic geometry, APF, Miller indices, Bragg | Several explicit numerical/derivation skills; overlap with the comparison paper |
-| Next | Bands, carriers, doping, p-n junction | Complete semiconductor branch of tracker |
-| Short daily recall | Definitions, examples, 14 Bravais lattices | Supports accurate short answers |
+| First | Cubic geometry, APF, [[glossary/miller-indices\|Miller indices]], Bragg | Several explicit numerical/derivation skills; overlap with the comparison paper |
+| Next | Bands, carriers, [[glossary/doping\|doping]], p-n junction | Complete semiconductor branch of tracker |
+| Short daily recall | Definitions, examples, 14 [[glossary/bravais-lattice\|Bravais lattices]] | Supports accurate short answers |
 
 No SurTech recurrence rates are inferred from the comparison paper.
 
 ## Sources
 
-Young & Freedman §36.6, printed pp.1205–1206 (PDF pp.1231–1232), and §§42.3–42.7, selected printed pp.1412–1426 (PDF offset +26), inspected for diffraction, structure, bands and carriers. Original geometry derivations and numerical problems use these physical principles. The external [OpenStax semiconductor discussion](https://openstax.org/books/university-physics-volume-3/pages/9-6-semiconductors-and-doping) was cross-checked; its online text contains a majority-carrier typo, so the local textbook was used to resolve the discrepancy. See [[Sources and Coverage]].
+Young & Freedman §36.6, printed pp.1205–1206 (PDF pp.1231–1232), and §§42.3–42.7, selected printed pp.1412–1426 (PDF offset +26), inspected for [[glossary/diffraction|diffraction]], structure, bands and carriers. Original geometry derivations and numerical problems use these physical principles. The external [OpenStax semiconductor discussion](https://openstax.org/books/university-physics-volume-3/pages/9-6-semiconductors-and-doping) was cross-checked; its online text contains a majority-carrier typo, so the local textbook was used to resolve the discrepancy. See [[Sources and Coverage]].

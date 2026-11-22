@@ -8,6 +8,8 @@ import spaRouterScript from "../../components/scripts/spa.inline"
 // @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline"
 // @ts-ignore
+import glossaryScript from "../../components/scripts/glossary.inline"
+// @ts-ignore
 import prefetchScript from "../../components/scripts/prefetch.inline"
 import baseStyles from "../../styles/base.scss"
 import customStyles from "../../styles/custom.scss"
@@ -90,6 +92,8 @@ async function joinScripts(scripts: string[]): Promise<string> {
 
 function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentResources) {
   const cfg = ctx.cfg.configuration
+
+  componentResources.afterDOMLoaded.push(glossaryScript)
 
   // popovers
   if (cfg.enablePopovers) {

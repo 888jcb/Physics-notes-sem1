@@ -6,23 +6,50 @@ tags: [physics, semester-1, module-1]
 [[Physics Index|Index]] · [[Formula and Revision Guide|Final revision]]
 
 > [!abstract] Learning route
-> Learn refraction → total internal reflection → fibre acceptance → fibre types and losses → hologram recording and viewing. You need only right-triangle trigonometry, refractive index and the idea of interference. All questions below are newly generated practice unless explicitly labelled otherwise. Suggested marks are practice allocations, not a verified SurTech marking scheme.
+> Learn [[glossary/refraction|refraction]] → [[glossary/total-internal-reflection|total internal reflection]] → fibre acceptance → fibre types and losses → [[glossary/hologram|hologram]] recording and viewing. You need only right-triangle trigonometry, [[glossary/refractive-index|refractive index]] and the idea of [[glossary/interference|interference]]. All questions below are newly generated practice unless explicitly labelled otherwise. Suggested marks are practice allocations, not a verified SurTech marking scheme.
+
+## Read the symbols before calculating
+
+Symbols are local labels: the same letter can mean something different in another topic. Read the equation and units before choosing a formula. A subscript labels a particular quantity; it is not a factor to multiply.
+
+| Symbol | Read it as | Meaning and unit |
+|---|---|---|
+| $n_0,n_1,n_2$ | n zero, n one, n two | Refractive indices outside, in the [[glossary/core\|core]], and in the [[glossary/cladding\|cladding]]; no unit |
+| $\theta_a$ | theta a | External acceptance half-angle to the fibre axis; degrees or radians |
+| $i_c$ | i critical | [[glossary/critical-angle\|Critical angle]] from the core-boundary [[glossary/normal\|normal]] |
+| $\lambda$ | lambda | Wavelength; metres, often quoted in nm |
+| $P_{in},P_{out}$ | power in, power out | Optical power; W or the same subunit on both sides of a ratio |
+| $\alpha$ | alpha | Here, [[glossary/attenuation\|attenuation]] per length; typically dB/km |
+| $\Delta\phi$ | delta phi | [[glossary/phase\|Phase]] difference; radians. Delta means a difference, not multiplication |
+
+> [!tip] Understand it, then teach it back
+> Start each topic with its plain-language explanation. Read the original equations and examples next. Close the note and answer the teach-back question in your own words. Linked scientific terms open a short definition: hover on the website, or open the linked note in Obsidian. On phones, tap a term for its definition. These are original teaching explanations, not quotations from Richard Feynman.
 
 ## 1. Principle and construction of optical fibres
 
-An optical fibre is a thin transparent waveguide that carries light along its length. The **core**, with refractive index $n_1$, is surrounded by **cladding**, with slightly smaller index $n_2$. A protective coating provides mechanical protection; it is not the light-guiding core. The essential condition is $n_1>n_2$.
+### Start with a question: why does light stay in the fibre?
+
+A transparent rod does not automatically trap every ray. Two things must cooperate: the [[glossary/core|core]] must have the higher optical index, and the ray must meet the side boundary at a large enough angle to its [[glossary/normal|normal]]. The boundary changes the permitted wave behaviour; under the total-reflection condition, light remains guided rather than radiating freely into the [[glossary/cladding|cladding]].
+
+Imagine a long corridor and draw one ray almost along its length and another aimed sharply towards a wall. The first meets the wall at a grazing angle: a large angle from the wall's normal. This geometry is the key to guiding. **Limit of the picture:** the wall is not a silver mirror, and a [[glossary/photon|photon]] is not a rubber ball. The index boundary and wave [[glossary/boundary-conditions|boundary conditions]] cause the guiding.
+
+Now read n = c/v as a comparison: a larger n means a smaller [[glossary/phase|phase]] speed. Nothing is being accelerated past c. When the wave crosses a stationary entrance face, its frequency stays fixed but its wavelength changes.
+
+**Teach it back:** Point to the entrance normal and the side-wall normal on the diagram. Why are they different? Explain why adding a protective coating alone cannot establish optical guiding.
+
+An optical fibre is a thin transparent [[glossary/waveguide|waveguide]] that carries light along its length. The **core**, with [[glossary/refractive-index|refractive index]] $n_1$, is surrounded by **cladding**, with slightly smaller index $n_2$. A protective coating provides mechanical protection; it is not the light-guiding core. The essential condition is $n_1>n_2$.
 
 Refractive index is $n=c/v$, where $c$ is the speed of light in vacuum and $v$ its phase speed in the material. Both speeds use m/s; $n$ has no unit. Snell's law at a flat boundary is $n_a\sin i=n_b\sin r$, with both angles measured **from the normal**.
 
-When a ray travels from core to cladding, the refracted ray bends away from the normal. At the **critical angle** $i_c$, it runs along the boundary. Therefore
+When a ray travels from core to cladding, the refracted ray bends away from the normal. At the **[[glossary/critical-angle|critical angle]]** $i_c$, it runs along the boundary. Therefore
 
 $$n_1\sin i_c=n_2\sin90^\circ,\qquad i_c=\sin^{-1}(n_2/n_1).$$
 
-For incidence $i>i_c$, total internal reflection (TIR) occurs. Repeated TIR confines suitable rays to the core. This ray model is useful for explaining multimode fibres; a mode is more precisely an allowed electromagnetic field pattern. Single-mode propagation requires the wave description.
+For incidence $i>i_c$, [[glossary/total-internal-reflection|total internal reflection]] (TIR) occurs. Repeated TIR confines suitable rays to the core. This ray model is useful for explaining multimode fibres; a [[glossary/mode|mode]] is more precisely an allowed electromagnetic field pattern. Single-mode propagation requires the wave description.
 
 ![Fibre acceptance and total internal reflection](assets/fibre.png)
 
-**Read the diagram:** the entrance face has its normal along the fibre axis. At the horizontal core boundary the normal is vertical. The external acceptance angle and internal reflection angle are therefore measured from different reference lines.
+**Read the diagram:** the entrance face has its normal along the fibre axis. At the horizontal core boundary the normal is vertical. The external [[glossary/acceptance-angle|acceptance angle]] and internal reflection angle are therefore measured from different reference lines.
 
 **Draw it in an exam:** draw a long core rectangle, cladding above and below, a dashed axis and a zigzag ray. Add $n_1>n_2$, the normal at a reflection point, and $i>i_c$. Then add a ray entering from air.
 
@@ -35,7 +62,17 @@ For incidence $i>i_c$, total internal reflection (TIR) occurs. Repeated TIR conf
 
 ## 2. Acceptance angle and numerical aperture
 
-**Acceptance angle $\theta_a$** is the maximum external angle, measured from the fibre axis, at which an incident meridional ray can be accepted for guided propagation in the ideal step-index model. Rotating this limiting ray around the axis produces an **acceptance cone**. The full cone angle is $2\theta_a$.
+### Turn the formula into a chain of causes
+
+Think backwards from a ray that is just barely guided. At the side wall it is exactly at the critical condition. That fixes its angle inside the [[glossary/core|core]]. [[glossary/refraction|Refraction]] at the entrance then tells us which outside launch angle produces that internal ray. This is why the [[glossary/numerical-aperture|NA]] derivation uses both the side boundary and the entrance face.
+
+The entrance angle is measured from the fibre axis, while the wall angle is measured from the side-wall [[glossary/normal|normal]]. Those lines are perpendicular, which creates the complementary-angle step. Draw the right angle before doing algebra.
+
+NA is an acceptance measure, not a number of [[glossary/mode|modes]] or an angle in degrees. To find an angle, divide NA by the external index and use inverse sine. If the entrance medium changes but the core and [[glossary/cladding|cladding]] do not, the core-cladding guiding condition remains the same; the refraction mapping at the entrance changes.
+
+**Teach it back:** Why can a larger NA accept a wider launch cone in the same surrounding medium? Why must a calculator be in degree mode when your final angle is in degrees?
+
+**[[glossary/acceptance-angle|Acceptance angle]] $\theta_a$** is the maximum external angle, measured from the fibre axis, at which an incident meridional ray can be accepted for guided propagation in the ideal step-index model. Rotating this limiting ray around the axis produces an **acceptance cone**. The full cone angle is $2\theta_a$.
 
 **Numerical aperture** measures light-accepting ability:
 
@@ -74,7 +111,7 @@ $$i_c=\sin^{-1}(1.46/1.48)=80.57^\circ,$$
 $$\mathrm{NA}=\sqrt{2.1904-2.1316}=0.2425,$$
 $$\theta_a=\sin^{-1}(0.2425/1.33)=10.50^\circ.$$
 
-**Check:** in air this same fibre gives $14.03^\circ$; the external acceptance half-angle is smaller in water. Do not change the core/cladding critical angle merely because the input medium changed.
+**Check:** in air this same fibre gives $14.03^\circ$; the external acceptance half-angle is smaller in water. Do not change the core/cladding [[glossary/critical-angle|critical angle]] merely because the input medium changed.
 
 ### Independent practice
 
@@ -87,15 +124,25 @@ $$\theta_a=\sin^{-1}(0.2425/1.33)=10.50^\circ.$$
 
 ## 3. Propagation and classification
 
-Two different classifications must be kept separate: **index profile** describes how refractive index changes across the fibre; **mode count** describes how many guided field patterns propagate.
+### One label answers how the index varies; another answers how many patterns fit
+
+Ask two independent questions. First, how does [[glossary/refractive-index|refractive index]] change as we move from the centre towards the edge? That gives step-index or graded-index. Second, how many guided spatial patterns can the fibre support at the chosen wavelength? That gives single-mode or multimode.
+
+As an analogy, a musical instrument can support several vibration patterns. The allowed patterns depend on the instrument and wavelength; they are not separate colours painted on the instrument. Fibre [[glossary/mode|modes]] are electromagnetic patterns, not literal strings or separate particles.
+
+For pulse spreading, imagine several travellers leaving together along paths with different travel times. Their arrival is spread out. A graded profile partly compensates longer paths with faster propagation in outer regions. Removing higher spatial modes removes intermodal delay differences, but different wavelengths can still travel with different delays.
+
+**Teach it back:** Explain why single-mode does not mean single wavelength, and why graded-index does not automatically mean single-mode.
+
+Two different classifications must be kept separate: **[[glossary/index-profile|index profile]]** describes how refractive index changes across the fibre; **mode count** describes how many guided field patterns propagate.
 
 ![Step-index, graded-index and mode comparison](assets/fibre-types.png)
 
 | Type | Index profile and light propagation | Main consequence |
 |---|---|---|
-| Step-index | Uniform core index with abrupt drop at cladding; rays follow straight segments with reflections | Multimode rays can have substantially different travel times |
+| Step-index | Uniform [[glossary/core\|core]] index with abrupt drop at [[glossary/cladding\|cladding]]; rays follow straight segments with reflections | Multimode rays can have substantially different travel times |
 | Graded-index | Core index decreases gradually from centre toward edge; rays bend smoothly | Outer paths travel through lower-index, faster regions, reducing modal delay differences |
-| Single-mode | Only the fundamental guided spatial mode at the operating wavelength; usually small core | Eliminates intermodal dispersion; chromatic dispersion can remain |
+| Single-mode | Only the fundamental guided spatial mode at the operating wavelength; usually small core | Eliminates intermodal [[glossary/dispersion\|dispersion]]; chromatic dispersion can remain |
 | Multimode | Many modes at the operating wavelength; usually larger core | Easier light coupling but differential modal delays can broaden pulses |
 
 **Guided explanation:** a pulse launched into several modes does not necessarily arrive as one sharp pulse. Different modes have different group delays. In a step-index multimode fibre this is pronounced. A suitable graded profile compensates part of the delay because light travelling farther from the centre moves through lower-index material. Single-mode operation removes competition between different spatial-mode delays.
@@ -113,11 +160,21 @@ Two different classifications must be kept separate: **index profile** describes
 
 ## 4. Losses and pulse spreading
 
+### Separate a weak message from a blurred message
+
+Send a short flash representing one digital symbol. After travel, it might contain less power: that is [[glossary/attenuation|attenuation]]. It might also arrive over a wider time interval: that is pulse broadening from [[glossary/dispersion|dispersion]]. These are different problems, and either can make communication difficult.
+
+The traveller analogy helps again. Fewer travellers arriving represents loss; the same travellers arriving at widely different times represents spreading. It explains the distinction, but the real signal is a wave and the mechanisms must be identified physically.
+
+Decibels describe ratios on a logarithmic scale. Equal losses expressed in dB add along a link because the underlying surviving-power fractions multiply. A 3 dB loss is about a factor of one half; two such losses leave about a quarter, not zero. Always state whether an attenuation is total dB or dB per kilometre.
+
+**Teach it back:** Could a bright output pulse still be too spread out to distinguish adjacent bits? Could a narrow pulse still be too weak to detect?
+
 **Attenuation** is reduction in optical power along a fibre. Its causes include:
 
 - **Absorption:** material or impurity absorption converts light energy to internal energy/heat.
 - **Scattering:** microscopic refractive-index fluctuations redirect light, with some power lost from guided propagation.
-- **Bending losses:** tight macrobends or small irregular microbends couple guided light into radiating or other lossy modes.
+- **Bending losses:** tight macrobends or small irregular microbends couple guided light into radiating or other lossy [[glossary/mode|modes]].
 - **Joint losses:** misalignment, gaps and imperfect splices/connectors lose power at interfaces.
 
 **Dispersion is different:** it spreads a pulse in time. Modal dispersion arises from different mode delays; chromatic dispersion arises because different spectral components travel with different group delays. Pulse overlap limits the data rate even if measurable power remains. This connects fibre physics to CSE networks.
@@ -141,7 +198,17 @@ $P_{in}$ and $P_{out}$ must use the same power unit; $L$ is typically km, so $\a
 
 ## 5. Holography — qualitative theory
 
-**What to learn:** how interference records enough information to reconstruct an object's wavefront. Prerequisites: coherent waves have a stable phase relationship; interference intensity depends on relative phase.
+### What information is missing from an ordinary photograph?
+
+A photograph records intensity at each picture point. To reconstruct how light originally spread from a three-dimensional object, we also need information about relative [[glossary/phase|phase]]. A recording plate cannot directly read a phase angle, so [[glossary/hologram|holography]] uses an extra reference wave.
+
+Where object and reference waves arrive in phase they reinforce; elsewhere they reinforce less or cancel. The resulting bright-dark structure turns relative phase information into recordable intensity variations. Later, illuminating the processed structure makes it diffract light into an object-like [[glossary/wavefront|wavefront]]. Your eyes interpret that arriving wavefront as if light came from an object with depth.
+
+The reference beam is like a common timing reference: it lets relative cycle positions affect what is measured. **Limit:** a hologram does not record a stopwatch value or a tiny complete object at every point. Reconstruction quality and viewing range depend on the recording geometry and available area.
+
+**Teach it back:** Describe recording using [[glossary/interference|interference]] and viewing using [[glossary/diffraction|diffraction]]. Why would shaking the apparatus during recording wash out the useful pattern?
+
+**What to learn:** how interference records enough information to reconstruct an object's wavefront. Prerequisites: [[glossary/coherence|coherent]] waves have a stable phase relationship; interference intensity depends on relative phase.
 
 A photograph directly records an intensity image. A hologram records an **interference pattern** between light scattered by the object and a coherent reference wave. The pattern encodes relative phase information as intensity variations. On suitable illumination, diffraction by the recorded structure reconstructs the object wavefront, producing depth and parallax.
 
@@ -188,33 +255,33 @@ The image has parallax: moving the viewing position reveals a different perspect
 | $\sin i_c=n_2/n_1$ | Core-to-cladding critical incidence; $n_1>n_2$ |
 | $\mathrm{NA}=\sqrt{n_1^2-n_2^2}$ | Ideal step-index meridional acceptance; dimensionless |
 | $\theta_a=\sin^{-1}(\mathrm{NA}/n_0)$ | External half-angle; degrees or radians as consistently chosen |
-| $A=10\log_{10}(P_{in}/P_{out})$ | Power attenuation in dB; same power units |
+| $A=10\log_{10}(P_{in}/P_{out})$ | Power [[glossary/attenuation\|attenuation]] in dB; same power units |
 
-**Derivation checklist:** [ ] critical-angle relation; [ ] NA from Snell's law and complementary angles. **Diagram checklist:** [ ] acceptance cone and TIR; [ ] index profiles; [ ] recording and reconstruction.
+**Derivation checklist:** [ ] critical-angle relation; [ ] [[glossary/numerical-aperture|NA]] from Snell's law and complementary angles. **Diagram checklist:** [ ] acceptance cone and [[glossary/total-internal-reflection|TIR]]; [ ] index profiles; [ ] recording and reconstruction.
 
 ### Active recall — close the notes first
 
 1. Why is $n_1>n_2$ necessary?
-2. Which normal defines $i_c$, and which line defines $\theta_a$?
+2. Which [[glossary/normal|normal]] defines $i_c$, and which line defines $\theta_a$?
 3. Can a single-mode fibre still disperse a pulse?
 4. What compensates travel time in a graded-index fibre?
-5. What is the difference between attenuation and dispersion?
-6. Which process records a hologram and which reconstructs it?
+5. What is the difference between attenuation and [[glossary/dispersion|dispersion]]?
+6. Which process records a [[glossary/hologram|hologram]] and which reconstructs it?
 
 > [!success]- Recall answers
-> 1. TIR requires travel from higher to lower index. 2. $i_c$: normal to core boundary; $\theta_a$: fibre axis/input-face normal. 3. Yes, chromatic dispersion can remain. 4. Outer regions have lower index and higher light speed. 5. Power reduction versus time spreading. 6. Interference versus diffraction.
+> 1. TIR requires travel from higher to lower index. 2. $i_c$: normal to [[glossary/core|core]] boundary; $\theta_a$: fibre axis/input-face normal. 3. Yes, chromatic dispersion can remain. 4. Outer regions have lower index and higher light speed. 5. Power reduction versus time spreading. 6. [[glossary/interference|Interference]] versus [[glossary/diffraction|diffraction]].
 
 ### Mixed practice test — suggested 20 marks
 
-1. Define acceptance angle and NA, including the external-medium factor. (3)
+1. Define [[glossary/acceptance-angle|acceptance angle]] and NA, including the external-medium factor. (3)
 2. Derive the ideal step-index NA expression with a labelled diagram. (5)
 3. For NA $0.30$ in air find the half-angle and full cone angle. (2)
 4. Compare step-index multimode and graded-index multimode propagation. (4)
 5. Explain recording/reconstruction of a hologram and two applications. (6)
 
-**Solutions/rubric:** 1: maximum accepted axial angle; $\mathrm{NA}=n_0\sin\theta_a$. 2: the five steps in Section 2, with both normals marked. 3: $17.46^\circ$, $34.92^\circ$. 4: compare abrupt/gradual profiles, zigzag/curved rays, delays and compensation. 5: coherent splitting, object/reference overlap, fringe recording, reconstruction by diffraction, plus security and deformation measurement with reasons.
+**Solutions/rubric:** 1: maximum accepted axial angle; $\mathrm{NA}=n_0\sin\theta_a$. 2: the five steps in Section 2, with both normals marked. 3: $17.46^\circ$, $34.92^\circ$. 4: compare abrupt/gradual profiles, zigzag/curved rays, delays and compensation. 5: [[glossary/coherence|coherent]] splitting, object/reference overlap, fringe recording, reconstruction by diffraction, plus security and deformation measurement with reasons.
 
-| Study priority | Topics | Basis |
+| Study priority | Topics | [[glossary/basis\|Basis]] |
 |---|---|---|
 | First | TIR, NA derivation and numericals | Central dependency of the fibre syllabus |
 | Next | Fibre comparisons, losses | Explicit tracker items and strong short-answer practice |
@@ -224,4 +291,4 @@ These priorities are syllabus-based judgment, not verified SurTech question freq
 
 ## Sources for this module
 
-Local Young & Freedman, *University Physics*, 13th ed., §33.3 printed pp.1088–1089 (PDF pp.1114–1115), §36.8 printed pp.1211–1212 (PDF pp.1237–1238), inspected for TIR and holography. Index-profile explanation and original problems are instructional synthesis. See [[Sources and Coverage]] for the full resource audit and supplementary teaching sources.
+Local Young & Freedman, *University Physics*, 13th ed., §33.3 printed pp.1088–1089 (PDF pp.1114–1115), §36.8 printed pp.1211–1212 (PDF pp.1237–1238), inspected for [[glossary/total-internal-reflection|TIR]] and [[glossary/hologram|holography]]. Index-profile explanation and original problems are instructional synthesis. See [[Sources and Coverage]] for the full resource audit and supplementary teaching sources.
